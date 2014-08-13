@@ -1,6 +1,6 @@
 ﻿namespace Services
 {
-	public interface IUserService
+	public interface ICoreUserService
 	{
 		 
 	}

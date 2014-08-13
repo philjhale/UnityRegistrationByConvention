@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using Microsoft.Practices.Unity;
 using System.Reflection;
+using Microsoft.Practices.Unity;
 
-namespace UnityRegistrationByConvention
+namespace UnityRegistrationByConvention.Unity
 {
 	public class UkRegistrationByConvention : RegistrationConvention
 	{
@@ -35,6 +35,7 @@ namespace UnityRegistrationByConvention
 			return null;
 		}
 
+		// This is based on Unity method WithMappings.FromMatchingInterface
 		private IEnumerable<Type> GetInterfaces(Type implementationType)
 		{
 			var matchingCountryInterfaceName = "I" + implementationType.Name;
@@ -55,6 +56,7 @@ namespace UnityRegistrationByConvention
             return emptyTypes;
 		}
 
+		// Stolen from Unity source code
 		private IEnumerable<Type> GetImplementedInterfacesToMap(Type type)
         {
             var typeInfo = type.GetTypeInfo();
@@ -69,7 +71,7 @@ namespace UnityRegistrationByConvention
             }
             else
             {
-				// PH TODO 
+				// Not needed for the purposes of this project
 				throw new NotImplementedException();
                 //return FilterMatchingGenericInterfaces(typeInfo);
             }

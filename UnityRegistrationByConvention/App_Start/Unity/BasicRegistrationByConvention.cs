@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using Microsoft.Practices.Unity;
 
-namespace UnityRegistrationByConvention
+namespace UnityRegistrationByConvention.Unity
 {
 	public class BasicRegistrationByConvention : RegistrationConvention
 	{

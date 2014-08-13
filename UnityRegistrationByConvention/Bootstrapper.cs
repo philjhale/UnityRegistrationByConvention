@@ -2,6 +2,7 @@ using System.Web.Mvc;
 using Microsoft.Practices.Unity;
 using Services;
 using Unity.Mvc4;
+using UnityRegistrationByConvention.Unity;
 
 namespace UnityRegistrationByConvention
 {
@@ -19,11 +20,7 @@ namespace UnityRegistrationByConvention
     private static IUnityContainer BuildUnityContainer()
     {
       var container = new UnityContainer();
-
-      // register all your components with the container here
-      // it is NOT necessary to register your controllers
-
-      // e.g. container.RegisterType<ITestService, TestService>();    
+  
       RegisterTypes(container);
 
       return container;
@@ -32,7 +29,7 @@ namespace UnityRegistrationByConvention
     public static void RegisterTypes(IUnityContainer container)
     {
 		// Manual registrations
-		//container.RegisterType<IUserService, UserService>(new PerResolveLifetimeManager());
+		//container.RegisterType<ICoreUserService, CoreUserService>(new PerResolveLifetimeManager());
 		//container.RegisterType<ICoreLoginService, UkLoginService>(new PerResolveLifetimeManager());
 		
 		// Very generic registration by convention
@@ -42,10 +39,12 @@ namespace UnityRegistrationByConvention
 		//	WithName.Default,
 		//	WithLifetime.ContainerControlled);
 
-		// Simplest possible extension of RegistrationConvention
+		// Simplest possible extension of RegistrationConvention. It does exactly the same as the statement above
 		//container.RegisterTypes(new BasicRegistrationByConvention());
 
-		// More complex example of RegistrationConvention extension
+		// More complex example of RegistrationConvention extension. The use case is a problem I face at work.
+		// Core services are created and in some cases they are overridden by country services. E.g. CoreLoginService, UkLoginService.
+		// Where country overrides exists in must be injected instead of the core service
 		container.RegisterTypes(new CoreRegistrationByConvention());
 		container.RegisterTypes(new UkRegistrationByConvention(), overwriteExistingMappings: true);
     }

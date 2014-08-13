@@ -9,7 +9,9 @@ namespace UnityRegistrationByConvention.Controllers
 {
 	public class HomeController : Controller
 	{
-		public HomeController(IUserService userService, ICoreLoginService loginService)
+		public HomeController(
+			ICoreUserService userService, // CoreUserService should be registered
+			ICoreLoginService loginService) // UkLoginService should be registered
 		{
 		}
 

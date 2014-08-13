@@ -41,9 +41,9 @@
   <ItemGroup>
     <Compile Include="CoreLoginService.cs" />
     <Compile Include="ICoreLoginService.cs" />
-    <Compile Include="IUserService.cs" />
+    <Compile Include="ICoreUserService.cs" />
     <Compile Include="UkLoginService.cs" />
-    <Compile Include="UserService.cs" />
+    <Compile Include="CoreUserService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
