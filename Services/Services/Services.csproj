@@ -39,7 +39,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CoreLoginService.cs" />
+    <Compile Include="ICoreLoginService.cs" />
     <Compile Include="IUserService.cs" />
+    <Compile Include="UkLoginService.cs" />
     <Compile Include="UserService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

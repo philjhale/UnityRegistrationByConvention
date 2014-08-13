@@ -9,7 +9,7 @@ namespace UnityRegistrationByConvention.Controllers
 {
 	public class HomeController : Controller
 	{
-		public HomeController(IUserService userService)
+		public HomeController(IUserService userService, ICoreLoginService loginService)
 		{
 		}
 

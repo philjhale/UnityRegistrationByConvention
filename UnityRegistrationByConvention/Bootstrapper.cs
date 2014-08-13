@@ -31,13 +31,18 @@ namespace UnityRegistrationByConvention
 
     public static void RegisterTypes(IUnityContainer container)
     {
+		// Manual registrations
 		//container.RegisterType<IUserService, UserService>(new PerResolveLifetimeManager());
+		//container.RegisterType<ICoreLoginService, UkLoginService>(new PerResolveLifetimeManager());
+		
+		// Very generic registration by convention
+		//container.RegisterTypes(
+		//	AllClasses.FromLoadedAssemblies(),
+		//	WithMappings.FromMatchingInterface,
+		//	WithName.Default,
+		//	WithLifetime.ContainerControlled);
 
-		container.RegisterTypes(
-			AllClasses.FromLoadedAssemblies(),
-			WithMappings.FromMatchingInterface,
-			WithName.Default,
-			WithLifetime.ContainerControlled);
+		container.RegisterTypes(new BasicRegistrationByConvention());
     }
   }
 }
