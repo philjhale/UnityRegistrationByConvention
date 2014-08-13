@@ -23,6 +23,7 @@ namespace UnityRegistrationByConvention
 			RouteConfig.RegisterRoutes(RouteTable.Routes);
 			BundleConfig.RegisterBundles(BundleTable.Bundles);
 			AuthConfig.RegisterAuth();
+			UnityConfig.RegisterDependencies();
 		}
 	}
 }
