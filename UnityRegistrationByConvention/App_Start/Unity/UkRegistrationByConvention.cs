@@ -6,7 +6,7 @@ using System.Reflection;
 
 namespace UnityRegistrationByConvention
 {
-	public class CountryRegistrationByConvention : RegistrationConvention
+	public class UkRegistrationByConvention : RegistrationConvention
 	{
 		private static readonly Type[] emptyTypes = new Type[0];
 

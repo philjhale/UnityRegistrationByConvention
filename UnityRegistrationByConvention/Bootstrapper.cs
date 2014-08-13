@@ -47,7 +47,7 @@ namespace UnityRegistrationByConvention
 
 		// More complex example of RegistrationConvention extension
 		container.RegisterTypes(new CoreRegistrationByConvention());
-		container.RegisterTypes(new CountryRegistrationByConvention(), overwriteExistingMappings: true);
+		container.RegisterTypes(new UkRegistrationByConvention(), overwriteExistingMappings: true);
     }
   }
 }

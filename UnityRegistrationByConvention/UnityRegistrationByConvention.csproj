@@ -193,10 +193,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\AuthConfig.cs" />
-    <Compile Include="App_Start\CoreRegistrationByConvention.cs" />
-    <Compile Include="App_Start\CountryRegistrationByConvention.cs" />
+    <Compile Include="App_Start\Unity\CoreRegistrationByConvention.cs" />
+    <Compile Include="App_Start\Unity\UkRegistrationByConvention.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
-    <Compile Include="App_Start\BasicRegistrationByConvention.cs" />
+    <Compile Include="App_Start\Unity\BasicRegistrationByConvention.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
