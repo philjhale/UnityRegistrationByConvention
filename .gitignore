@@ -1,0 +1,4 @@
+*.suo
+UnityRegistrationByConvention/bin/
+UnityRegistrationByConvention/obj/
+packages/
