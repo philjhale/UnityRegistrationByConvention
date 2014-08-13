@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnityRegistrationByConventi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnityRegistrationByConvention.Services", "Services\Services\UnityRegistrationByConvention.Services.csproj", "{4F57D4A8-9FAD-471B-AC05-21655CAD9B46}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnityRegistrationByConvention.Tests", "Tests\UnityRegistrationByConvention.Tests\UnityRegistrationByConvention.Tests.csproj", "{C19E63AC-CEF0-4810-9071-AA749D8FED77}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{4F57D4A8-9FAD-471B-AC05-21655CAD9B46}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4F57D4A8-9FAD-471B-AC05-21655CAD9B46}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4F57D4A8-9FAD-471B-AC05-21655CAD9B46}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C19E63AC-CEF0-4810-9071-AA749D8FED77}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C19E63AC-CEF0-4810-9071-AA749D8FED77}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C19E63AC-CEF0-4810-9071-AA749D8FED77}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C19E63AC-CEF0-4810-9071-AA749D8FED77}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

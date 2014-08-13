@@ -4,3 +4,6 @@ UnityRegistrationByConvention/obj/
 packages/
 Services/Services/bin/
 Services/Services/obj/
+Tests/UnityRegistrationByConvention.Tests/bin/
+Tests/UnityRegistrationByConvention.Tests/obj/
+UnityRegistrationByConvention.sln.DotSettings.user

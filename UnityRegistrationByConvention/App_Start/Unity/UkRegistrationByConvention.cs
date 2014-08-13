@@ -12,7 +12,9 @@ namespace UnityRegistrationByConvention.Unity
 
 		public override IEnumerable<Type> GetTypes()
 		{
-			return AllClasses.FromLoadedAssemblies().Where(x => x.Assembly.FullName.Contains("UnityRegistrationByConvention.Services"));
+			// Concat required so registrations work in web project and unit tests. Haven't got my head around why yet
+			return AllClasses.FromLoadedAssemblies().Concat(AllClasses.FromAssembliesInBasePath())
+				.Where(x => x.Assembly.FullName.Contains("UnityRegistrationByConvention.Services"));
 		}
 
 		public override Func<Type, IEnumerable<Type>> GetFromTypes()
