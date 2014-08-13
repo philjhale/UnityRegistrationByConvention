@@ -31,7 +31,13 @@ namespace UnityRegistrationByConvention
 
     public static void RegisterTypes(IUnityContainer container)
     {
-		container.RegisterType<IUserService, UserService>(new PerResolveLifetimeManager());
+		//container.RegisterType<IUserService, UserService>(new PerResolveLifetimeManager());
+
+		container.RegisterTypes(
+			AllClasses.FromLoadedAssemblies(),
+			WithMappings.FromMatchingInterface,
+			WithName.Default,
+			WithLifetime.ContainerControlled);
     }
   }
 }
