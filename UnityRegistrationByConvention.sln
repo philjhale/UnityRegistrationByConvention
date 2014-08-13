@@ -5,7 +5,7 @@ VisualStudioVersion = 12.0.30723.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnityRegistrationByConvention", "UnityRegistrationByConvention\UnityRegistrationByConvention.csproj", "{98ECEA56-531A-4A5B-9915-12CF96CD8940}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Services", "Services\Services\Services.csproj", "{4F57D4A8-9FAD-471B-AC05-21655CAD9B46}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnityRegistrationByConvention.Services", "Services\Services\UnityRegistrationByConvention.Services.csproj", "{4F57D4A8-9FAD-471B-AC05-21655CAD9B46}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

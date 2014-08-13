@@ -42,7 +42,12 @@ namespace UnityRegistrationByConvention
 		//	WithName.Default,
 		//	WithLifetime.ContainerControlled);
 
-		container.RegisterTypes(new BasicRegistrationByConvention());
+		// Simplest possible extension of RegistrationConvention
+		//container.RegisterTypes(new BasicRegistrationByConvention());
+
+		// More complex example of RegistrationConvention extension
+		container.RegisterTypes(new CoreRegistrationByConvention());
+		container.RegisterTypes(new CountryRegistrationByConvention(), overwriteExistingMappings: true);
     }
   }
 }

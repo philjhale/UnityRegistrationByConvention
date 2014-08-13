@@ -193,6 +193,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\AuthConfig.cs" />
+    <Compile Include="App_Start\CoreRegistrationByConvention.cs" />
+    <Compile Include="App_Start\CountryRegistrationByConvention.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\BasicRegistrationByConvention.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
@@ -328,9 +330,9 @@
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Services\Services\Services.csproj">
+    <ProjectReference Include="..\Services\Services\UnityRegistrationByConvention.Services.csproj">
       <Project>{4f57d4a8-9fad-471b-ac05-21655cad9b46}</Project>
-      <Name>Services</Name>
+      <Name>UnityRegistrationByConvention.Services</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
