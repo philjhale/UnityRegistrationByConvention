@@ -10,13 +10,17 @@ namespace UnityRegistrationByConvention.Unity
 	{
 		private static readonly Type[] emptyTypes = new Type[0];
 
+		// Get the classes you want to register
 		public override IEnumerable<Type> GetTypes()
 		{
-			// Concat required so registrations work in web project and unit tests. Haven't got my head around why yet
+			// AllClasses.FromLoadedAssemblies() loads assemblies in the current app domain and is required for MVC project.
+			// AllClasses.FromAssembliesInBasePath() loads assemblies from the bin directory and required so unit tests work. 
+			// AllClasses.FromAssembliesInBasePath() alone doesn't work for the MVC project because the base path of an MVC project isn't the bin directory
 			return AllClasses.FromLoadedAssemblies().Concat(AllClasses.FromAssembliesInBasePath())
 				.Where(x => x.Assembly.FullName.Contains("UnityRegistrationByConvention.Services"));
 		}
 
+		// Get the interfaces you want to map against the concrete class. E.g. Return ITenant for Tenant concrete class
 		public override Func<Type, IEnumerable<Type>> GetFromTypes()
 		{
 			return GetInterfaces;
